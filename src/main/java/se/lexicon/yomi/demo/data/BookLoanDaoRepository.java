@@ -1,7 +1,6 @@
-package Repository;
+package se.lexicon.yomi.demo.data;
 
-import model.BookLoan;
-import model.BookLoanDao;
+import se.lexicon.yomi.demo.entity.BookLoan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -48,7 +47,7 @@ public class BookLoanDaoRepository implements BookLoanDao {
 
     @Override
     @Transactional(rollbackFor = RuntimeException.class)
-    public boolean delete(int bookLoanId) {
+    public void delete(int bookLoanId) {
         BookLoan remove = findById(bookLoanId);
         if (remove != null){
             entity.remove(remove);
@@ -56,6 +55,6 @@ public class BookLoanDaoRepository implements BookLoanDao {
             throw new IllegalArgumentException("BookLoan Information Could not be found");
         }
         remove = findById(bookLoanId);
-        return remove == null;
+
     }
 }

@@ -1,7 +1,4 @@
-package model;
-
-import net.bytebuddy.implementation.bind.MethodDelegationBinder;
-import org.hibernate.annotations.GenericGenerator;
+package se.lexicon.yomi.demo.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;

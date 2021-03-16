@@ -1,8 +1,4 @@
-package model;
-
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.Generated;
-import org.hibernate.annotations.GenericGenerator;
+package se.lexicon.yomi.demo.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -23,7 +19,7 @@ public class AppUser {
     private LocalDate regDate;
     @OneToOne( cascade = CascadeType.ALL)
     private Details userDetails;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "appUser")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "borrower")
     private List <BookLoan> loans = new ArrayList<>();
 
     public AppUser(List<BookLoan> bookLoans) {

@@ -1,7 +1,6 @@
-package model;
+package se.lexicon.yomi.demo.entity;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Objects;
 import java.util.Set;
 

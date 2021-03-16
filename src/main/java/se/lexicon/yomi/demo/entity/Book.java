@@ -1,7 +1,4 @@
-package model;
-
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
-import org.springframework.boot.autoconfigure.web.WebProperties;
+package se.lexicon.yomi.demo.entity;
 
 import javax.persistence.*;
 import java.util.Objects;

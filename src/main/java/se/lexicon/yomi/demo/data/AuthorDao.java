@@ -1,4 +1,6 @@
-package model;
+package se.lexicon.yomi.demo.data;
+
+import se.lexicon.yomi.demo.entity.Author;
 
 import java.util.Collection;
 
@@ -8,5 +10,5 @@ public interface AuthorDao {
     AuthorDao findById(Integer authorId);
     Collection<Author> findAll();
     Author update(Author author);
-    boolean delete(Integer authorId);
+    void delete(Integer authorId);
 }

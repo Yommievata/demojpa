@@ -1,7 +1,6 @@
-package Repository;
+package se.lexicon.yomi.demo.data;
 
-import model.AppUser;
-import model.AppUserDao;
+import se.lexicon.yomi.demo.entity.AppUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -50,7 +49,7 @@ public class AppUserDaoRepository implements AppUserDao{
 
     @Override
     @Transactional(rollbackFor = RuntimeException.class)
-    public boolean delete(Integer appUserId) {
+    public void delete(Integer appUserId) {
         AppUser toRemove = findById(appUserId);
         if (toRemove != null){
             em.remove(toRemove);
@@ -58,7 +57,6 @@ public class AppUserDaoRepository implements AppUserDao{
             throw new IllegalArgumentException("AppUser Could not be found");
         }
         toRemove = findById(appUserId);
-        return toRemove == null;
     }
 }
 

@@ -1,4 +1,6 @@
-package model;
+package se.lexicon.yomi.demo.data;
+
+import se.lexicon.yomi.demo.entity.AppUser;
 
 import java.util.Collection;
 
@@ -8,6 +10,6 @@ public interface AppUserDao {
     AppUser findById(Integer appUserId);
     Collection<AppUser> findAll();
     AppUser update(AppUser appUser);
-    boolean delete(Integer appUserId);
+    void delete(Integer appUserId);
 
 }

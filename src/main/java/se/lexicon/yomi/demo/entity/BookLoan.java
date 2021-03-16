@@ -1,4 +1,4 @@
-package model;
+package se.lexicon.yomi.demo.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;

@@ -10,4 +10,5 @@ public class DemojpaApplication {
         SpringApplication.run(DemojpaApplication.class, args);
     }
 
+
 }

@@ -1,4 +1,6 @@
-package model;
+package se.lexicon.yomi.demo.data;
+
+import se.lexicon.yomi.demo.entity.BookLoan;
 
 import java.util.Collection;
 
@@ -8,6 +10,6 @@ public interface BookLoanDao {
     BookLoan findById(int bookLoanId);
     Collection<BookLoan> findAll();
     BookLoan update(BookLoan bookLoan);
-    boolean delete(int bookLoanId);
+    void delete(int bookLoanId);
 
 }

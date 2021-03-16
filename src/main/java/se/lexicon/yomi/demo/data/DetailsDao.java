@@ -1,4 +1,6 @@
-package model;
+package se.lexicon.yomi.demo.data;
+
+import se.lexicon.yomi.demo.entity.Details;
 
 import java.util.Collection;
 
@@ -8,6 +10,6 @@ public interface DetailsDao {
     Details findById(Integer detailsId);
     Collection<Details> findAll();
     Details update(Details details);
-    boolean delete(Integer detailsId);
+    void delete(Integer detailsId);
 
 }

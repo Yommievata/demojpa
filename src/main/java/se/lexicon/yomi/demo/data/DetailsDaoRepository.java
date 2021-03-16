@@ -1,7 +1,6 @@
-package Repository;
+package se.lexicon.yomi.demo.data;
 
-import model.Details;
-import model.DetailsDao;
+import se.lexicon.yomi.demo.entity.Details;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -49,7 +48,7 @@ public class DetailsDaoRepository implements DetailsDao{
 
     @Override
     @Transactional(rollbackFor = RuntimeException.class)
-    public boolean delete(Integer detailsId) {
+    public void delete(Integer detailsId) {
         Details toRemove = findById(detailsId);
         if (toRemove != null){
             entityManager.remove(toRemove);
@@ -57,6 +56,5 @@ public class DetailsDaoRepository implements DetailsDao{
             throw new IllegalArgumentException("Details Could not be found");
         }
         toRemove = findById(detailsId);
-        return toRemove == null;
     }
 }
